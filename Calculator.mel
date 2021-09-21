@@ -1,0 +1,55 @@
+global proc float Sum(float $numbers[]){
+    float $sum = 0;
+    for( $i=0; $i<size($numbers); $i++){
+        $sum += $numbers[$i];
+    }
+    return($sum);
+}
+
+global proc float Subtraction(float $numbers[]){
+    float $difference = $numbers[0];
+    for( $i=1; $i<size($numbers); $i++){
+        $difference -= $numbers[$i];
+    }
+    return $difference;
+}
+
+global proc float Multi(float $numbers[]){
+    float $total = $numbers[0];
+    for( $i=1; $i<size($numbers); $i++){
+        $total *= $numbers[$i];
+    }
+    return $total;
+}
+global proc float Div(float $numbers[]){
+    float $total = $numbers[0];
+    for( $i=1; $i<size($numbers); $i++){
+        $total /= $numbers[$i];
+    }
+    return $total;
+}
+
+global proc float Means(float $numbers[]){
+    float $mean = (Sum($numbers) / size($numbers));   
+    return $mean;
+}
+
+global proc float Med(float $numbers[])
+{
+    int $half = size($numbers)/2;
+    float $center = $numbers[$half];
+
+    return $center;
+}
+
+
+Med({3,4,10,6,7});
+
+
+
+
+
+
+
+
+
