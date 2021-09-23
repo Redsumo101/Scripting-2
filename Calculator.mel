@@ -42,16 +42,16 @@ global proc float Med(float $numbers[])
     return $center;
 }
 
-/*global proc float [] Mode(float $numbers[]){
-    float $most[] = {0};
-    float $compare[] = {0};
+global proc float Mode(float $numbers[])
+{
     float $newNums[] = sort($numbers);
-    for( $i=0; $i<size($newNums); i++){
-        if($newNums[i] == $most[0]){
-            
-        }
+    for ($i = 0; $i<size($newNums); $i++)
+    {
+       
     }
-}*/
+    return $newNums[1];
+   
+}
 
 global proc float Expo(float $numbers[]){
     float $amount = $numbers[1];
@@ -63,12 +63,4 @@ global proc float Expo(float $numbers[]){
 
 }
 
-Expo({5,3});
-
-
-
-
-
-
-
-
+Mode({5,3,3,3,5,5,5,5,5});
